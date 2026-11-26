@@ -358,7 +358,17 @@ for e in load_errors:
 st.caption("Decision-support tool. Figures come from IHIP P/L-form reports; forecasts are statistical estimates "
            "and must be verified by field investigation.")
 
-tab1, tab2, tab3 = st.tabs(["📊 3-Year MO Review (TPP)", "⚠️ Predictive Early Warning", "📥 IHIP Upload & Cleaner"])
+# Read ?tab=... from the portal card link (defaulting to review)
+requested_tab = st.query_params.get("tab", "review").lower()
+tab_order = {
+    "forecast": ["⚠️ Predictive Early Warning", "📊 3-Year MO Review (TPP)", "📥 IHIP Upload & Cleaner"],
+    "cleaner":  ["📥 IHIP Upload & Cleaner", "📊 3-Year MO Review (TPP)", "⚠️ Predictive Early Warning"],
+}.get(requested_tab, ["📊 3-Year MO Review (TPP)", "⚠️ Predictive Early Warning", "📥 IHIP Upload & Cleaner"])
+
+tabs = dict(zip(tab_order, st.tabs(tab_order)))
+tab1 = tabs["📊 3-Year MO Review (TPP)"]
+tab2 = tabs["⚠️ Predictive Early Warning"]
+tab3 = tabs["📥 IHIP Upload & Cleaner"]
 
 # =========================================================================== #
 # TAB 1 - 3-Year review
