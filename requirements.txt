@@ -1,0 +1,13 @@
+# Keechery Health Block - Epidemiological Surveillance & Early-Warning Dashboard
+# Lower bounds only, so Streamlit Community Cloud installs current compatible releases.
+streamlit>=1.40.0
+pandas>=2.2.0          # forecaster.py uses groupby().apply(..., include_groups=False) (needs 2.2+)
+numpy>=1.26.0
+scikit-learn>=1.4.0    # RandomForest + brier_score_loss / roc_auc_score
+geopandas>=0.14.0
+shapely>=2.0.0         # shapely.ops.voronoi_diagram
+folium>=0.16.0
+streamlit-folium>=0.20.0
+plotly>=5.20.0
+requests>=2.31.0       # Open-Meteo + Groq REST calls
+openpyxl>=3.1.0        # lets data_cleaner.py read .xlsx IHIP exports

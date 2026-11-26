@@ -1,0 +1,8 @@
+panchayat,unit_type,health_unit,population,lat,lon,ward_count,note
+Amballoor,CHC,Amballoor CHC (Keechery),28500,9.875,76.405,18,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Mulanthuruthy,FHC,Mulanthuruthy FHC,32000,9.902,76.386,20,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Edakkattuvayal,PHC,Edakkattuvayal PHC,17500,9.878,76.435,14,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Chottanikkara,PHC,Chottanikkara PHC,24000,9.921,76.392,19,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Maneed,PHC,Maneed PHC,15500,9.83,76.415,13,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Poothrikka,PHC,Poothrikka PHC,21000,9.945,76.44,16,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
+Thiruvaniyoor,PHC,Thiruvaniyoor PHC,19500,9.856,76.46,15,DUMMY population/lat/lon - replace with Census/panchayat figures and real centroids
